@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyLoc</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+   
+    
+</head>
+<body>
+    <!--Header-->
+    <header class="bandeau">
+        <div class="logo">
+            <img src="ress/logo.png" alt="logo">    
+        </div>
+    </header>
+
+    <!--Slide-->
+    <section id="slideContainer">
+        <div id="slide">
+            <div class = "itemImage">
+                <img src="ress/slide1.jpg" alt="imageSlide">
+            </div>
+            <div class = "itemImage">
+                <img src="ress/slide2.jpg" alt="imageSlide">
+            </div>
+            <div class = "itemImage">
+                <img src="ress/slide3.jpg" alt="imageSlide">
+            </div>
+        </div>
+        <div class = "gaucheDroite">
+            <input type="image" class = "btnGauche" src="ress/left.png" alt="btnGauche" >
+            <input type="image" class = "btnDroit" src="ress/right.png" alt="btnDroit" >
+        </div>
+
+    </section>
+
+    <section id="titreContainer">
+            <h2>Choisissez Votre station de vélos</h2>
+            <div class="helpMarkers">
+                <div class="marker">
+                    <img class="imgMarker" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" alt="red marker">
+                    <p class="textHelp"><strong class="rouge">Rouge</strong> : station actuellement fermée, ou n'ayant aucun vélos disponibles.</p>
+                </div>
+                <div class="marker">
+                    <img class="imgMarker" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png" alt="orange marker">
+                    <p class="textHelp"><strong class="orange">Orange</strong> : station ouverte avec moin de 10 vélos disponibles</p>
+                </div>
+                <div class="marker">
+                    <img class="imgMarker" src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png" alt="green marker">
+                    <p class="textHelp"><strong class="vert">Vert</strong> : station ouverte avec plus de 10 vélos disponibles</p>
+                </div>
+            </div>
+            
+             
+    </section>
+
+    <!--map-->
+    <section id="mapContainer">
+
+        <div id="map"></div> <!-- Div de la carte -->
+        
+        <div id="formContainer"> <!-- Div de l'encart de réservation -->
+            <div id="stationInfos"></div>
+            <form id="form" name="formSaisie">
+                <legend>Réservez un vélo</legend>
+                <label id="labelForm" for="name">Nom : </label></br><input type="text" name="name" id="name" required/><br />
+                <label id="labelForm" for="firstname"> Prénom : </label></br><input type="text" name="firstname" id="firstname" required>
+            </br>
+                <input type="image" ClassName="submit" id="btnSelection" src="ress/validation.png" alt="Submit"/>
+            </form>
+            
+            <span id="pasDeVelos"><img src="/ress/refus.png" alt="Valider cette station"></span> 
+        </div>
+
+        <div id="canvasContainer"> <!-- Div du Canvas -->
+            <div id="canvasMessage">
+                <h2>Signez dans la case pour confirmer :</h2>
+            </div>
+            <div id="canvasDiv">
+                <canvas id="canvas">Apposez votre signature (si vous voyez ce message, votre navigateur n'est pas à jour)</canvas>
+            </div>
+            <div id="canvasConfirm">
+                <span id="btValider"><img src="ress/validation.png" alt="Valider"></span>
+                <span id="btClear"><img src="ress/correction.png" alt="Corriger"></span>
+            </div>
+        </div>
+            
+    </section>
+        
+    <footer id="timer">
+        <p>
+            <p id="textTimer">1 vélo réservé à la station <span id="station"></span>  pour <span id="min"></span> min et <span id="sec"></span>s</p>
+            <p id="expired">Votre réservation a expirée !</p>
+        </p>
+    </footer>
+    
+    <!--Scrypt-->
+    <script src="js/slide.js" ></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin="">
+    </script>
+    <script src="js/jquery-3.4.1.js" ></script>
+    <script  src="js/ajax.js"></script>
+    <script  src="js/map.js" ></script>
+    <script  src="js/main.js"></script>
+    <script  src="js/canvas.js"></script>
+    <script  src="js/reservation.js"></script>
+    <script  src="js/timer.js"></script>     
+</body>
+</html>
