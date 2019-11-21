@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+      
+}
+
+.bandeau {
+    width: 100%;
+    background-color:#0099F9 ;
+    box-shadow: 0px 0px 15px  5px #aaa;
+}
+
+.logo{
+    text-align: center;
+}
+
+   
+.bandeau img{
+    width :400px;
+    margin: auto;
+}
+  /******************/
+ /*section carousel*/
+/******************/
+
+#slide{
+    width: 1050px;
+    height: 520px;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0px 0px 15px  5px #aaa;
+ }
+ 
+ .itemImage {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     overflow: hidden;
+     display: none;
+ }
+
+.gaucheDroite{
+    width: 150px;
+    margin: auto;
+    z-index: 1000;
+}
+
+.gaucheDroite :hover{
+    opacity: 0.5;
+}
+
+.gaucheDroite input{
+    height: 70px;
+    cursor: pointer;
+}
+
+#titreContainer h2{
+    
+    margin-top: 40px;
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+.helpMarkers{
+    display: flex;
+    width: 100%;
+    background: #0099F9;
+    margin-top: 70px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    box-shadow: 0px 0px 15px  5px #aaa;
+
+}
+
+.marker{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    
+}    
+
+
+.textHelp {
+    padding-left: 10px;
+    color: white;
+}    
+
+.rouge{
+    color: #CB2B3E;
+}
+
+.orange{
+    color: #CB8429;
+}
+
+.vert{
+    color: #28AD25;
+}
+
+/*section map*/
+#mapContainer{
+    width: 75%;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    box-shadow: 0px 0px 15px  5px #aaa;
+}
+
+
+#map{
+    margin: auto;
+}
+#map{
+    width: 100%;
+    height: 60vh;
+}
+
+
+#stationInfos{
+    display: none;
+   
+}
+#stationInfos ul{
+    list-style:none;
+    font-weight: bolder;
+}
+
+#item h1{
+    font-size: 20px;
+
+}
+
+#formContainer{
+    background: #E8E1D7;
+    margin-left:0;
+    margin-right: 0;
+    padding: 0 0 0 0;
+}
+
+#form{
+    display: none;
+    margin: auto;
+    
+}
+
+#form legend{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#form input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#btnSelection{
+    width: 50px;
+    margin: 10px auto;
+    cursor:pointer;
+}
+
+#pasDeVelos img{
+    width: 50px;
+    display: none;
+    margin: auto;
+}
+
+
+/* section canvas */
+#canvas{
+    border: solid 1px black;
+    background: #ffffff;
+}
+
+#canvasContainer{
+    display: none;
+    background:#E8E1D7 ;
+}
+
+#canvasContainer img{
+    width:50px;
+    cursor: pointer;
+}
+#timer{
+    display: none;
+}
+
+footer{
+    background-color:#0099F9;
+    height: 100px;
+    text-align: center;
+    box-shadow: 0px 0px 15px  5px #aaa;
+    color: white;
+}
+footer p{
+    margin: auto;
+    font-size: 25px;
+}
+
+#textTimer{
+   padding-top: 30px;
+}
+#expired{
+    display: none;
+    padding-top: 30px;
+}
+
